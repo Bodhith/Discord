@@ -1,0 +1,95 @@
+embedDescription-1Cuq9a
+embedDescription-1Cuq9a
+
+==============================================================
+
+b1868d829b37f0a81533ededb9ffe5f4
+
+5b68b417ff72b3a2f4c24426d1064b66
+1edfe735f87e201398d505124c421812
+
+==============================================================
+
+var rejected, accepted, other, emoji, allEmojis;
+
+rejected = accepted = other = 0;
+
+allEmojis = document.getElementsByClassName("reactionInner-rRPZdY");
+
+for(var i=0; i<allEmojis.length; i++)
+{
+	emoji = allEmojis[i].innerHTML;
+
+	if ( emoji.indexOf("b1868d829b37f0a81533ededb9ffe5f4") != -1 )
+    {
+		rejected++;
+    }
+	else if( emoji.indexOf("5b68b417ff72b3a2f4c24426d1064b66") != -1 || emoji.indexOf("1edfe735f87e201398d505124c421812") != -1 )
+    {
+		accepted++;
+    }
+	else
+    {
+		other++;
+    }
+}
+
+console.log("Rejected:-" + rejected);
+console.log("Accepted:-" + accepted+other);
+console.log("Accept Ratio:- " + accepted/(rejected+other) );
+
+=====================================================================================
+
+var applications, application, totalApplications;
+totalApplications = 0;
+applications = document.getElementsByClassName("embedDescription-1Cuq9a");
+for(var i=0; i<applications.length; i++)
+{
+	application = applications[i].innerText;
+
+	if( application.indexOf("NEW-Clan Application") == 10 )
+    {
+		totalApplications++;
+    }
+}
+console.log(totalApplications);
+
+=====================================================================================
+
+document.getElementsByClassName("containerCozyBounded-1rKFAn containerCozy-jafyvG container-1YxwTf")[48].firstChild.children[1].children[1].children[1].children[0].children[0].children[0].src;
+
+=====================================================================================
+
+for(var i=0; i<allApplications.length; i++)
+	{
+		currentApplication = allApplications[i];
+
+		for( j=0; j<currentApplication.childElementCount; j++)
+		{
+            try
+                {
+                    emoji = currentApplication[j].children[1].children[1].children[1].children[0].children[0].children[0];
+
+                    if( emoji.src.indexOf("b1868d829b37f0a81533ededb9ffe5f4") != -1 )
+                    {
+                        rejected++;
+                    }
+                    else if( emoji.src.indexOf("5b68b417ff72b3a2f4c24426d1064b66") != -1 || emoji.src.indexOf("1edfe735f87e201398d505124c421812") != -1 )
+                    {
+                        accepted++;
+                    }
+                    else
+                    {
+                        other++;
+                    }
+                }
+                catch ( error )
+                {
+                    console.log(i, error);
+
+                    pending++;
+
+                    continue;
+                }
+        }
+    }
